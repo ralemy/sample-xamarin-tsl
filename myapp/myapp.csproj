@@ -55,7 +55,7 @@
     <Compile Include="Views\InventoryPage.xaml.cs">
       <DependentUpon>InventoryPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\InventoryModelView.cs" />
+    <Compile Include="ViewModels\InventoryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

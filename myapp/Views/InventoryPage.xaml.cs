@@ -16,7 +16,7 @@ public InventoryPage()
 		var newStep = Math.Round(e.NewValue / powerStep);
 		PowerSlider.Value = newStep * powerStep;
 	};
-	BindingContext = ViewModelLocator.GetDependency<InventoryModelView>();
+	BindingContext = ViewModelLocator.GetDependency<InventoryViewModel>();
 }
 	}
 }

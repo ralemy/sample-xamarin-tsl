@@ -32,7 +32,7 @@ namespace myapp
 			ViewModelLocator.InjectDependencies();
 			ViewModelLocator.Register<MainViewModel>();
 			ViewModelLocator.Register<TriggerMonitorViewModel>();
-			ViewModelLocator.Register<InventoryModelView>();
+			ViewModelLocator.Register<InventoryViewModel>();
 		}
 
 		protected override void OnStart()

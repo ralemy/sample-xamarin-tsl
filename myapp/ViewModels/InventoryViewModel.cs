@@ -7,7 +7,7 @@ using Tsl.Core;
 
 namespace myapp
 {
-	public class InventoryModelView : ViewModelBase
+	public class InventoryViewModel : ViewModelBase
 	{
 		private readonly ReaderService _readerService;
 		public ICommand UpdateConfig { get; private set; }
@@ -69,7 +69,7 @@ namespace myapp
 		}
 
 
-		public InventoryModelView(ReaderService readerService)
+		public InventoryViewModel(ReaderService readerService)
 		{
 			_readerService = readerService;
 			Func<bool> hasReader = () => _readerService.ConnectedReader != null;
