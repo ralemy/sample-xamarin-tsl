@@ -11,8 +11,8 @@ namespace myapp
 	{
 		private readonly ReaderService _readerService;
 		public ICommand UpdateConfig { get; private set; }
-public ICommand ScanBarcode { get; private set; }
-public ICommand RunInventory { get; private set; }
+		public ICommand ScanBarcode { get; private set; }
+		public ICommand RunInventory { get; private set; }
 
 		private bool _shouldUpdate = true;
 		public bool ShouldUpdate
@@ -72,7 +72,7 @@ public ICommand RunInventory { get; private set; }
 		public InventoryModelView(ReaderService readerService)
 		{
 			_readerService = readerService;
-Func<bool> hasReader = () => _readerService.ConnectedReader != null;
+			Func<bool> hasReader = () => _readerService.ConnectedReader != null;
 
 			UpdateConfig = new RelayCommand(ConfigReader, () => hasReader() && ShouldUpdate);
 			ScanBarcode = new RelayCommand(() => _readerService.GetBarcode(_readerService.BarcodeConfig),
