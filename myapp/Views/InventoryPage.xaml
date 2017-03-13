@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="myapp.InventoryPage">
+	<ContentPage.Content>
+		<StackLayout Padding="30">
+			<Label Text="{Binding OutputPower, StringFormat='{0:N1} dBm'}" />
+			<Slider Maximum="{Binding MaxOutputPower}" Minimum="{Binding MinOutputPower}" Value="{Binding OutputPower}" x:Name="PowerSlider" />
+			<Button Text="Update Reader" Command="{Binding UpdateConfig}" />
+			<Label Text="{Binding ScanCount, StringFormat='Scan Count: {0:N1}'}" />
+			<Label Text="{Binding LastEpc, StringFormat='Last EPC: {0}'}" />
+			<Button Text="Run One Inventory" Command="{Binding RunInventory}" />
+			<Label Text="{Binding LastBarcode, StringFormat='Last Barcode: {0}'}" />
+			<Button Text="Scan a Barcode" Command="{Binding ScanBarcode}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
